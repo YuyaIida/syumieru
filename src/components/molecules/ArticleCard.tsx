@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
@@ -16,7 +17,8 @@ import ShareIcon from '@material-ui/icons/Share'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      maxWidth: 500
+      margin: 30,
+      maxWidth: 1000
     },
     media: {
       height: 0,
@@ -28,7 +30,14 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const ArticleCard: React.FC = () => {
+type Props = {
+  articleTitle: string
+  articleBody: string
+  headerUrl: string
+  postedDate: string
+}
+
+const ArticleCard: React.FC<Props> = ({ articleTitle, articleBody, headerUrl, postedDate }) => {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
@@ -43,15 +52,17 @@ const ArticleCard: React.FC = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="バイク納車！！"
-        subheader="2020/11/28"
+        title={articleTitle}
+        subheader={postedDate}
       />
-      <CardMedia className={classes.media} image="../../static/bike.jpg" title="bike" />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          ついにバイク納車！！
-        </Typography>
-      </CardContent>
+      <CardMedia className={classes.media} image={headerUrl} title="bike" />
+      <Link href="/articleDetail">
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {articleBody}
+          </Typography>
+        </CardContent>
+      </Link>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
