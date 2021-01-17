@@ -179,246 +179,8 @@ exports.default = _default;
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("23aj");
+module.exports = __webpack_require__("QeBL");
 
-
-/***/ }),
-
-/***/ "23aj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return /* binding */ getStaticProps; });
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-
-// EXTERNAL MODULE: external "@material-ui/core/styles"
-var styles_ = __webpack_require__("9Pu4");
-
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// EXTERNAL MODULE: external "@material-ui/core/Card"
-var Card_ = __webpack_require__("YeXC");
-var Card_default = /*#__PURE__*/__webpack_require__.n(Card_);
-
-// EXTERNAL MODULE: external "@material-ui/core/CardActions"
-var CardActions_ = __webpack_require__("PxrZ");
-var CardActions_default = /*#__PURE__*/__webpack_require__.n(CardActions_);
-
-// EXTERNAL MODULE: external "@material-ui/core/CardHeader"
-var CardHeader_ = __webpack_require__("bXgj");
-var CardHeader_default = /*#__PURE__*/__webpack_require__.n(CardHeader_);
-
-// EXTERNAL MODULE: external "@material-ui/core/CardContent"
-var CardContent_ = __webpack_require__("thJL");
-var CardContent_default = /*#__PURE__*/__webpack_require__.n(CardContent_);
-
-// EXTERNAL MODULE: external "@material-ui/core/CardMedia"
-var CardMedia_ = __webpack_require__("s051");
-var CardMedia_default = /*#__PURE__*/__webpack_require__.n(CardMedia_);
-
-// EXTERNAL MODULE: external "@material-ui/core/Avatar"
-var Avatar_ = __webpack_require__("4ZJ9");
-var Avatar_default = /*#__PURE__*/__webpack_require__.n(Avatar_);
-
-// EXTERNAL MODULE: external "@material-ui/core/Typography"
-var Typography_ = __webpack_require__("UVoM");
-var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_);
-
-// EXTERNAL MODULE: external "@material-ui/core/colors"
-var colors_ = __webpack_require__("+FwM");
-
-// EXTERNAL MODULE: external "@material-ui/core/IconButton"
-var IconButton_ = __webpack_require__("EmCc");
-var IconButton_default = /*#__PURE__*/__webpack_require__.n(IconButton_);
-
-// EXTERNAL MODULE: external "@material-ui/icons/MoreVert"
-var MoreVert_ = __webpack_require__("UQSI");
-var MoreVert_default = /*#__PURE__*/__webpack_require__.n(MoreVert_);
-
-// EXTERNAL MODULE: external "@material-ui/icons/Favorite"
-var Favorite_ = __webpack_require__("Fm7H");
-var Favorite_default = /*#__PURE__*/__webpack_require__.n(Favorite_);
-
-// EXTERNAL MODULE: external "@material-ui/icons/Share"
-var Share_ = __webpack_require__("EAEr");
-var Share_default = /*#__PURE__*/__webpack_require__.n(Share_);
-
-// CONCATENATED MODULE: ./src/components/molecules/ArticleCard.tsx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const ArticleCard_useStyles = Object(styles_["makeStyles"])(theme => Object(styles_["createStyles"])({
-  root: {
-    margin: 30,
-    maxWidth: 600,
-    maxHeight: 400
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%' // 16:9
-
-  },
-  avatar: {
-    backgroundColor: colors_["red"][500]
-  }
-}));
-
-const ArticleCard = ({
-  articleTitle,
-  articleBody,
-  headerUrl,
-  postedDate
-}) => {
-  const classes = ArticleCard_useStyles();
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Card_default.a, {
-    className: classes.root,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(CardHeader_default.a, {
-      avatar: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Avatar_default.a, {
-        "aria-label": "recipe",
-        className: classes.avatar,
-        children: "Y"
-      }),
-      action: /*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
-        "aria-label": "settings",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(MoreVert_default.a, {})
-      }),
-      title: articleTitle,
-      subheader: postedDate
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(CardMedia_default.a, {
-      className: classes.media,
-      image: headerUrl,
-      title: "bike"
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-      href: "/articleDetail",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(CardContent_default.a, {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Typography_default.a, {
-          variant: "body2",
-          color: "textSecondary",
-          component: "p",
-          children: articleBody
-        })
-      })
-    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(CardActions_default.a, {
-      disableSpacing: true,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
-        "aria-label": "add to favorites",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Favorite_default.a, {})
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
-        "aria-label": "share",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Share_default.a, {})
-      })]
-    })]
-  });
-};
-
-/* harmony default export */ var molecules_ArticleCard = (ArticleCard);
-// EXTERNAL MODULE: external "@material-ui/core"
-var core_ = __webpack_require__("KKbo");
-
-// CONCATENATED MODULE: ./src/util/date.ts
-// FIXME: stringからDate型に変換して日本時間に修正する
-const shapeDate = date => date.slice(0, 10);
-// CONCATENATED MODULE: ./src/components/molecules/ArticleArea.tsx
-
-
-
-
-
-
-
-const ArticleArea = ({
-  articles
-}) => {
-  const useStyles = Object(styles_["makeStyles"])(theme => Object(styles_["createStyles"])({
-    root: {
-      backgroundColor: '#f9f4ef'
-    }
-  }));
-  const classes = useStyles();
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    className: classes.root,
-    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(core_["Grid"], {
-      container: true,
-      spacing: 1,
-      justify: "center",
-      alignItems: "center",
-      children: articles.items.map(article => /*#__PURE__*/Object(jsx_runtime_["jsx"])(core_["Grid"], {
-        container: true,
-        item: true,
-        xs: 4,
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(molecules_ArticleCard, {
-          articleTitle: article.fields.title,
-          articleBody: article.fields.body,
-          headerUrl: article.fields.headerImage.fields.file.url,
-          postedDate: shapeDate(article.sys.createdAt)
-        })
-      }, article.fields.title))
-    })
-  });
-};
-
-/* harmony default export */ var molecules_ArticleArea = (ArticleArea);
-// EXTERNAL MODULE: ./src/components/molecules/Header.tsx
-var Header = __webpack_require__("9Htb");
-
-// CONCATENATED MODULE: ./pages/index.tsx
-
-
-
-
-
-
-
-const contentful = __webpack_require__("5NG/");
-
-const Home = ({
-  articles
-}) => {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(Header["a" /* default */], {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(molecules_ArticleArea, {
-      articles: articles
-    })]
-  });
-};
-
-const getStaticProps = async () => {
-  const client = contentful.createClient({
-    space: "xoss9eel4gbp",
-    accessToken: "Yr2amP-j26-y2aSd3ojy12BoWDeJqENVd9RjWOVNHiY"
-  });
-  const articles = await client.getEntries();
-  return {
-    props: {
-      articles
-    }
-  };
-};
-/* harmony default export */ var pages = __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
@@ -1090,6 +852,244 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/CardActions");
+
+/***/ }),
+
+/***/ "QeBL":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return /* binding */ getStaticProps; });
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__("F5FC");
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+
+// EXTERNAL MODULE: external "@material-ui/core/styles"
+var styles_ = __webpack_require__("9Pu4");
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: external "@material-ui/core/Card"
+var Card_ = __webpack_require__("YeXC");
+var Card_default = /*#__PURE__*/__webpack_require__.n(Card_);
+
+// EXTERNAL MODULE: external "@material-ui/core/CardActions"
+var CardActions_ = __webpack_require__("PxrZ");
+var CardActions_default = /*#__PURE__*/__webpack_require__.n(CardActions_);
+
+// EXTERNAL MODULE: external "@material-ui/core/CardHeader"
+var CardHeader_ = __webpack_require__("bXgj");
+var CardHeader_default = /*#__PURE__*/__webpack_require__.n(CardHeader_);
+
+// EXTERNAL MODULE: external "@material-ui/core/CardContent"
+var CardContent_ = __webpack_require__("thJL");
+var CardContent_default = /*#__PURE__*/__webpack_require__.n(CardContent_);
+
+// EXTERNAL MODULE: external "@material-ui/core/CardMedia"
+var CardMedia_ = __webpack_require__("s051");
+var CardMedia_default = /*#__PURE__*/__webpack_require__.n(CardMedia_);
+
+// EXTERNAL MODULE: external "@material-ui/core/Avatar"
+var Avatar_ = __webpack_require__("4ZJ9");
+var Avatar_default = /*#__PURE__*/__webpack_require__.n(Avatar_);
+
+// EXTERNAL MODULE: external "@material-ui/core/Typography"
+var Typography_ = __webpack_require__("UVoM");
+var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_);
+
+// EXTERNAL MODULE: external "@material-ui/core/colors"
+var colors_ = __webpack_require__("+FwM");
+
+// EXTERNAL MODULE: external "@material-ui/core/IconButton"
+var IconButton_ = __webpack_require__("EmCc");
+var IconButton_default = /*#__PURE__*/__webpack_require__.n(IconButton_);
+
+// EXTERNAL MODULE: external "@material-ui/icons/MoreVert"
+var MoreVert_ = __webpack_require__("UQSI");
+var MoreVert_default = /*#__PURE__*/__webpack_require__.n(MoreVert_);
+
+// EXTERNAL MODULE: external "@material-ui/icons/Favorite"
+var Favorite_ = __webpack_require__("Fm7H");
+var Favorite_default = /*#__PURE__*/__webpack_require__.n(Favorite_);
+
+// EXTERNAL MODULE: external "@material-ui/icons/Share"
+var Share_ = __webpack_require__("EAEr");
+var Share_default = /*#__PURE__*/__webpack_require__.n(Share_);
+
+// CONCATENATED MODULE: ./src/components/molecules/ArticleCard.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const ArticleCard_useStyles = Object(styles_["makeStyles"])(theme => Object(styles_["createStyles"])({
+  root: {
+    margin: 30,
+    maxWidth: 600,
+    maxHeight: 400
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%' // 16:9
+
+  },
+  avatar: {
+    backgroundColor: colors_["red"][500]
+  }
+}));
+
+const ArticleCard = ({
+  articleTitle,
+  articleBody,
+  headerUrl,
+  postedDate
+}) => {
+  const classes = ArticleCard_useStyles();
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Card_default.a, {
+    className: classes.root,
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(CardHeader_default.a, {
+      avatar: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Avatar_default.a, {
+        "aria-label": "recipe",
+        className: classes.avatar,
+        children: "Y"
+      }),
+      action: /*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
+        "aria-label": "settings",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(MoreVert_default.a, {})
+      }),
+      title: articleTitle,
+      subheader: postedDate
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(CardMedia_default.a, {
+      className: classes.media,
+      image: headerUrl,
+      title: "bike"
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+      href: "/articleDetail",
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(CardContent_default.a, {
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Typography_default.a, {
+          variant: "body2",
+          color: "textSecondary",
+          component: "p",
+          children: articleBody
+        })
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])(CardActions_default.a, {
+      disableSpacing: true,
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
+        "aria-label": "add to favorites",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Favorite_default.a, {})
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(IconButton_default.a, {
+        "aria-label": "share",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Share_default.a, {})
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ var molecules_ArticleCard = (ArticleCard);
+// EXTERNAL MODULE: external "@material-ui/core"
+var core_ = __webpack_require__("KKbo");
+
+// CONCATENATED MODULE: ./src/util/date.ts
+// FIXME: stringからDate型に変換して日本時間に修正する
+const shapeDate = date => date.slice(0, 10);
+// CONCATENATED MODULE: ./src/components/molecules/ArticleArea.tsx
+
+
+
+
+
+
+
+const ArticleArea = ({
+  articles
+}) => {
+  const useStyles = Object(styles_["makeStyles"])(theme => Object(styles_["createStyles"])({
+    root: {
+      backgroundColor: '#f9f4ef'
+    }
+  }));
+  const classes = useStyles();
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+    className: classes.root,
+    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(core_["Grid"], {
+      container: true,
+      spacing: 1,
+      justify: "center",
+      alignItems: "center",
+      children: articles.items.map(article => /*#__PURE__*/Object(jsx_runtime_["jsx"])(core_["Grid"], {
+        container: true,
+        item: true,
+        xs: 4,
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(molecules_ArticleCard, {
+          articleTitle: article.fields.title,
+          articleBody: article.fields.body,
+          headerUrl: article.fields.headerImage.fields.file.url,
+          postedDate: shapeDate(article.sys.createdAt)
+        })
+      }, article.fields.title))
+    })
+  });
+};
+
+/* harmony default export */ var molecules_ArticleArea = (ArticleArea);
+// EXTERNAL MODULE: ./src/components/molecules/Header.tsx
+var Header = __webpack_require__("9Htb");
+
+// CONCATENATED MODULE: ./src/pages/index.tsx
+
+
+
+
+
+
+
+const contentful = __webpack_require__("5NG/");
+
+const Home = ({
+  articles
+}) => {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(Header["a" /* default */], {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(molecules_ArticleArea, {
+      articles: articles
+    })]
+  });
+};
+
+const getStaticProps = async () => {
+  const client = contentful.createClient({
+    space: "xoss9eel4gbp",
+    accessToken: "Yr2amP-j26-y2aSd3ojy12BoWDeJqENVd9RjWOVNHiY"
+  });
+  const articles = await client.getEntries();
+  return {
+    props: {
+      articles
+    }
+  };
+};
+/* harmony default export */ var pages = __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
