@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1
     },
+    appBar: {
+      backgroundColor: '#8c7851'
+    },
     menuButton: {
       marginRight: theme.spacing(2)
     },
@@ -24,13 +27,13 @@ const Header: React.FC = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            趣味YELL
+            YELL
           </Typography>
         </Toolbar>
       </AppBar>
