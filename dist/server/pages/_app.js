@@ -96,7 +96,7 @@ module.exports =
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("hUgY");
+module.exports = __webpack_require__("cha2");
 
 
 /***/ }),
@@ -115,7 +115,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "hUgY":
+/***/ "cha2":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
