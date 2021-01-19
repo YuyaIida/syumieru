@@ -12,6 +12,9 @@ const ArticleArea: React.FC<any> = ({ articles }) => {
       }
     })
   )
+  console.log('----------------------')
+  console.log(articles)
+  console.log('----------------------')
 
   const classes = useStyles()
   return (
