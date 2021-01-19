@@ -1,1 +1,0 @@
-{"ast":null,"code":"// FIXME: stringからDate型に変換して日本時間に修正する\nexport const shapeDate = date => date.slice(0, 10);","map":null,"metadata":{},"sourceType":"module"}
