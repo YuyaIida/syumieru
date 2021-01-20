@@ -12,9 +12,6 @@ const ArticleArea: React.FC<any> = ({ articles }) => {
       }
     })
   )
-  console.log('----------------------')
-  console.log(articles)
-  console.log('----------------------')
 
   const classes = useStyles()
   return (
@@ -27,6 +24,7 @@ const ArticleArea: React.FC<any> = ({ articles }) => {
               articleBody={article.fields.body}
               headerUrl={article.fields.headerImage.fields.file.url}
               postedDate={shapeDate(article.sys.createdAt)}
+              path={article.sys.id}
             />
           </Grid>
         ))}

@@ -36,9 +36,10 @@ type Props = {
   articleBody: string
   headerUrl: string
   postedDate: string
+  path: string
 }
 
-const ArticleCard: React.FC<Props> = ({ articleTitle, articleBody, headerUrl, postedDate }) => {
+const ArticleCard: React.FC<Props> = ({ articleTitle, articleBody, headerUrl, postedDate, path }) => {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
@@ -57,7 +58,7 @@ const ArticleCard: React.FC<Props> = ({ articleTitle, articleBody, headerUrl, po
         subheader={postedDate}
       />
       <CardMedia className={classes.media} image={headerUrl} title="bike" />
-      <Link href="/articleDetail">
+      <Link href={`/article/${path}`}>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             {articleBody}
